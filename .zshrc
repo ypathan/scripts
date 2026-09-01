@@ -70,8 +70,8 @@ alias globalip='curl ifconfig.me'
 alias ghostty-config='nvim "$HOME/Library/Application Support/com.mitchellh.ghostty/config"'
 alias all-java='/usr/libexec/java_home -V'
 
-alias vps='ssh -i /Users/myousuf/.ssh/id_ypathan ypathan@yousuf.life'
-alias vps2='ssh -i /Users/myousuf/.ssh/id_openclaw ypathan@89.117.55.23'
+alias vps='ssh -i ~/.ssh/id_ypathan ypathan@yousuf.life'
+alias vps2='ssh -i ~/.ssh/id_openclaw ypathan@89.117.55.23'
 alias worklaptop='ssh -p 99 -i ~/.ssh/id_ypathan ypathan@csdkms.ddns.net'
 
 alias workgit='~/scripts/workgit.sh'
@@ -98,16 +98,6 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
 eval "$(fnm env --use-on-cd)"
 
-## [Completion]
-## Completion scripts setup. Remove the following line to uninstall
-[[ -f /Users/ypathan/.dart-cli-completion/zsh-config.zsh ]] && . /Users/ypathan/.dart-cli-completion/zsh-config.zsh || true
-## [/Completion]
-
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 function run_tmux_sessionizer() {
     ~/scripts/tmux-sessionier.sh
 }
@@ -115,19 +105,3 @@ function run_tmux_sessionizer() {
 # Bind the widget to Ctrl+F (Control + F => ^F)
 zle -N run_tmux_sessionizer
 bindkey '^F' run_tmux_sessionizer
-
-export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
-export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
-export PATH="/opt/homebrew/opt/zip/bin:$PATH"
-
-# OpenClaw Completion
-source "/Users/myousuf/.openclaw/completions/openclaw.zsh"
-
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
-export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
-
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
