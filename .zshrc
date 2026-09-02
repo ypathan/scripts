@@ -41,22 +41,6 @@ export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
 # Initialize completion system
 autoload -Uz compinit && compinit
 
-# Source the powerlevel10k theme configuration file
-# source ~/.p10k.zsh
-
-
-# nvim() {
-#   if [[ -z $TMUX ]]; then
-#     echo "Enter Session Name (or 'skip' to use current directory): "
-#     read name
-#     if [[ $name == "skip" ]]; then
-#       name=$(basename "$PWD")
-#     fi
-#     tmux new-session -s "$name" "command nvim $*"
-#   else
-#     command nvim "$@"
-#   fi
-# }
 
 # Function to print local IP addresses, excluding loopback
 localip() {
