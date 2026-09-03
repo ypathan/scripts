@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOCAL_DIR="/Users/myousuf/dev/abdl-worklog/"
+LOCAL_DIR="/home/ypathan/dev/abdl-vault"
 REMOTE_DIR="ypathan@yousuf.life:/home/ypathan/notes/"
 EXCLUDES=(
   "--exclude=.git/"
